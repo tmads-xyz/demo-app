@@ -17,6 +17,7 @@
       background: var(--tg-theme-bg-color);
       color: var(--tg-theme-text-color);
       font-family: -apple-system, system-ui, "Inter", Roboto, sans-serif;
+	  overflow: hidden;
     }
     #main {
       display: flex;
@@ -27,7 +28,7 @@
     }
     button, select {
       font-size: 24px;
-      margin: 8px;
+      margin: 0;
       background: var(--tg-theme-button-color);
       color: var(--tg-theme-button-text-color);
       border: none;
@@ -49,14 +50,27 @@
     #docs {
       color: var(--tg-theme-button-color);
     }
+	table {
+		border: none;
+	}
     </style>
 	<title>TMAds Example</title>
 </head>
 <body>
   <div id="main">
     <p id="title">TMAds example app</p>
-    <button id="show">Show banner</button>
-    <button id="hide" disabled>Hide banner</button>
+	<table>
+		<tr>
+			<td><button id="show">Show banner</button></td>
+			<td><button id="showInt">Show interstitial</button></td>
+			<td><button id="showRew">Show rewarded</button></td>
+		</tr>
+		<tr>
+			<td><button id="hide" disabled>Hide banner</button></td>
+			<td><button id="preloadInt">Preload interstitial</button></td>
+			<td><button id="preloadRew">Preload rewarded</button></td>
+		</tr>
+	</table>
     <p>Banner position:</p>
     <select id="pos">
       <option value="top">Top</option>
