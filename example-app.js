@@ -18,6 +18,7 @@ window.onload=function(){ //initializing the whole thing on page load
   };
   document.getElementById("showInt").onclick=function(){ //show TMAds Interstital upon clicking "Show" button
     this.disabled=true;
+	Telegram.WebApp.expand(); //expanding Mini App before displaying a fullscreen ad
     document.getElementById("title").innerHTML="Showing Interstital...";
     document.getElementById("preloadInt").disabled=true;
     document.getElementById("showRew").disabled=true;
@@ -34,6 +35,7 @@ window.onload=function(){ //initializing the whole thing on page load
   };
   document.getElementById("showRew").onclick=function(){ //show TMAds Rewarded upon clicking "Show" button
     this.disabled=true;
+	Telegram.WebApp.expand(); //expanding Mini App before displaying a fullscreen ad
     document.getElementById("title").innerHTML="Showing Rewarded...";
     document.getElementById("preloadRew").disabled=true;
     document.getElementById("showInt").disabled=true;
