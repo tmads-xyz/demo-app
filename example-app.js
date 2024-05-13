@@ -124,7 +124,7 @@ window.onload=function(){ //initializing the whole thing on page load
 	but_sur_preload.disabled=false;
   });
   TMAds.addCallback("onInterstitialAdShowSuccess",function(){ //adding on TMAds interstitial ad show success callback
-    title.innerHTML="Interstitial successfully showed";
+    title.innerHTML="Interstitial successfully completed";
     but_int_preload.disabled=false;
     but_int_show.disabled=false;
     but_rew_show.disabled=false;
@@ -160,7 +160,7 @@ window.onload=function(){ //initializing the whole thing on page load
 	but_sur_preload.disabled=false;
   });
   TMAds.addCallback("onRewardedAdShowSuccess",function(){ //adding on TMAds Rewarded ad show success callback
-    title.innerHTML="Rewarded successfully showed";
+    title.innerHTML="Rewarded successfully completed";
     but_int_preload.disabled=false;
     but_int_show.disabled=false;
     but_rew_show.disabled=false;
@@ -169,7 +169,7 @@ window.onload=function(){ //initializing the whole thing on page load
 	but_sur_preload.disabled=false;
   });
   TMAds.addCallback("onRewardedAdShowFail",function(){ //adding on TMAds Rewarded ad show fail callback
-    title.innerHTML="Rewarded failed to show";
+    title.innerHTML="Rewarded was not completed";
     but_int_preload.disabled=false;
     but_int_show.disabled=false;
     but_rew_show.disabled=false;
