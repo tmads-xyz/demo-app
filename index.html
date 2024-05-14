@@ -12,7 +12,7 @@
 	<script src="https://telegram.org/js/telegram-web-app.js"></script>
 	<script src="https://cdn.tmads.xyz/tmadsSdk.js"></script>
 	<script src="./example-app.js"></script>
-  <style>
+<style>
     body {
       background: var(--tg-theme-bg-color);
       color: var(--tg-theme-text-color);
@@ -33,6 +33,8 @@
       color: var(--tg-theme-button-text-color);
       border: none;
       border-radius: 8px;
+	  width: 100%;
+	  text-align: center;
     }
     button:disabled, select:disabled {
       opacity: 0.5;
@@ -52,36 +54,54 @@
     }
 	table {
 		border: none;
+		width: 90%;
+		max-width: 640px;
 	}
     </style>
 	<title>TMAds Example</title>
 </head>
 <body>
   <div id="main">
-    <p id="title">TMAds example app</p>
+    <p id="title">TMAds Example App</p>
 	<table>
 		<tr>
-			<td><button id="show">Show banner</button></td>
-			<td><button id="showInt">Show interstitial</button></td>
-			<td><button id="showRew">Show rewarded</button></td>
+			<td colspan="2">Banner</td>
+			<td>Banner position</td>
 		</tr>
 		<tr>
-			<td><button id="hide" disabled>Hide banner</button></td>
-			<td><button id="preloadInt">Preload interstitial</button></td>
-			<td><button id="preloadRew">Preload rewarded</button></td>
+			<td><button id="show">Show</button></td>
+			<td><button id="hide">Hide</button></td>
+			<td colspan="2">
+				<select id="pos">
+				  <option value="top">Top</option>
+				  <option value="bottom">Bottom</option>
+				</select>
+			</td>
 		</tr>
 	</table>
 	<table>
 		<tr>
-			<td><button id="preloadSur">Preload survey</button></td>
-			<td><button id="showSur">Show survey</button></td>
+			<td colspan="2">Interstitial</td>
+		</tr>
+		<tr>
+			<td><button id="showInt">Show</button></td>
+			<td><button id="preloadInt">Preload</button></td>
+		</tr>
+		<tr>
+			<td colspan="2">Rewarded video</td>
+		</tr>
+		<tr>
+			<td><button id="showRew">Show</button></td>
+			<td><button id="preloadRew">Preload</button></td>
+		</tr>
+		<tr>
+			<td colspan="2">Rewarded survey</td>
+		</tr>
+		<tr>
+			<td><button id="showSur">Show</button></td>
+			<td><button id="preloadSur">Preload</button></td>
 		</tr>
 	</table>
-    <p>Banner position:</p>
-    <select id="pos">
-      <option value="top">Top</option>
-      <option value="bottom">Bottom</option>
-    </select>
     <div id="bottom">
       <a id="docs" href="https://cdn.tmads.xyz/help.html" target="_blank">Docs</a>
     </div>
